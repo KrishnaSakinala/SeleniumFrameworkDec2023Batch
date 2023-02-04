@@ -1,6 +1,7 @@
 package testcases;
 
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
@@ -30,5 +31,10 @@ public class AdminFunctionalityTest extends BaseTest {
 		extentTest = extentReports.createTest("testToShowFailure");
 
 		Assert.assertEquals(driver.getTitle(), "Hospital Management");
+	}
+	
+	@Test
+	public void testToShowSkip() {
+		throw new SkipException("Skipping this test...");
 	}
 }
