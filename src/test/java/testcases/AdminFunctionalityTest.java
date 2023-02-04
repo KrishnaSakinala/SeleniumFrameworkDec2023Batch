@@ -37,4 +37,9 @@ public class AdminFunctionalityTest extends BaseTest {
 	public void testToShowSkip() {
 		throw new SkipException("Skipping this test...");
 	}
+	
+	@Test
+	public void addedByOtherPerson() {
+		System.out.println("Added By Other Person....");
+	}
 }
